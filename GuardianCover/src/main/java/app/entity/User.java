@@ -1,10 +1,8 @@
 package app.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity(name = "users")
@@ -18,6 +16,11 @@ public class User {
     private String tel;
     private String password;
     private String address;
+    @OneToMany(mappedBy = "user")
+    private List<Insurance> insurances;
+
+
+
 
     public User(String firstName,String lastName,String email,String tel,String password,String address){
         this.firstName = firstName;
@@ -30,6 +33,7 @@ public class User {
     public User(){
 
     }
+
 
     public UUID getId() {
         return id;
@@ -85,5 +89,13 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public List<Insurance> getInsurances() {
+        return insurances;
+    }
+
+    public void setInsurances(List<Insurance> insurances) {
+        this.insurances = insurances;
     }
 }

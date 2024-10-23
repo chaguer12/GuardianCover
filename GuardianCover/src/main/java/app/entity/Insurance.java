@@ -12,10 +12,16 @@ public class Insurance {
     protected double base;
     protected String attachment;
     protected boolean is_accepted = false;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    protected User user;
 
-    public Insurance(double base,String attachment){
+
+
+    public Insurance(double base,String attachment, User user){
         this.base = base;
         this.attachment = attachment;
+        this.user = user;
 
     }
     public Insurance(){
@@ -52,5 +58,12 @@ public class Insurance {
 
     public void setIs_accepted(boolean is_accepted) {
         this.is_accepted = is_accepted;
+    }
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
