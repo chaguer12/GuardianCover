@@ -4,8 +4,10 @@ import app.entity.enums.HouseType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.Table;
 
-@Entity(name = "houseInsurances")
+@Entity
+
 public class HouseInsurance extends Insurance{
     private double price;
     @Enumerated(EnumType.STRING)

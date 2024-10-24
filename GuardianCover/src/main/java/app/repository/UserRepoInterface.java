@@ -5,8 +5,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface UserRepoInterface extends CrudRepository<User, Long> {
+import java.util.UUID;
+
+
+public interface UserRepoInterface extends JpaRepository<User, UUID>{
+//    void save(User user);
 
 
 

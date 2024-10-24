@@ -1,6 +1,9 @@
 package app;
 
+import app.config.AppConfig;
 import app.config.JPApersistenceConfig;
+import app.entity.User;
+import app.service.impl.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import javax.sql.DataSource;
@@ -10,23 +13,13 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) {
         // Create Spring application context
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(JPApersistenceConfig.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         // Get the DataSource bean
-        DataSource dataSource = context.getBean(DataSource.class);
+        UserService dataSource = context.getBean(UserService.class);
+        User user = new User("hihi","jqdkhd","kqjflkjd","029384808","1224121","safi");
+        dataSource.save(user);
 
-        // Test the connection
-        try (Connection connection = dataSource.getConnection()) {
-            if (connection != null && !connection.isClosed()) {
-                System.out.println("Connection successful!");
-            } else {
-                System.out.println("Failed to establish connection.");
-            }
-        } catch (SQLException e) {
-            System.out.println("SQLException occurred: " + e.getMessage());
-        }
 
-        // Close the Spring context
-        context.close();
     }
 }

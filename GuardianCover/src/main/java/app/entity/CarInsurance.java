@@ -5,7 +5,8 @@ import jakarta.persistence.*;
 
 import java.util.UUID;
 
-@Entity(name = "carInsurances")
+@Entity
+
 public class CarInsurance extends Insurance{
     private int age;
     @Enumerated(EnumType.STRING)

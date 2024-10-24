@@ -13,13 +13,12 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
-import java.beans.BeanProperty;
 import java.util.Properties;
 
 @Configuration
 @EnableJpaRepositories("app")
 @ComponentScan("app")
-
+@EnableTransactionManagement
 public class JPApersistenceConfig {
 
 
@@ -41,6 +40,12 @@ public class JPApersistenceConfig {
         em.setPackagesToScan("app");
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
+        Properties jpaProperties = new Properties();
+        jpaProperties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+        jpaProperties.put("hibernate.hbm2ddl.auto", "update");
+        jpaProperties.put("hibernate.show_sql", "true");
+        em.setJpaProperties(jpaProperties);
+
         return em;
 
 

@@ -1,8 +1,9 @@
 package app.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
-@Entity(name = "healthInsurances")
+@Entity
 public class HealthInsurance extends Insurance{
     private int age;
     private String healthState;
