@@ -11,10 +11,5 @@ import org.springframework.stereotype.Repository;
 public class UserRepository  {
     @PersistenceContext
     private EntityManager em;
-//    @Override
-//    @Transactional
-//    public void save(User user) {
-//        em.persist(user);
-//
-//    }
+
 }
