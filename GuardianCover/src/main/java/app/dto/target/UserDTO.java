@@ -1,4 +1,4 @@
-package app.dto.targets;
+package app.dto.target;
 
 import app.entity.Insurance;
 import jakarta.validation.constraints.NotNull;
@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class UserDTO {
+    @NotNull
     private UUID id;
     @NotNull
     private String firstName;
