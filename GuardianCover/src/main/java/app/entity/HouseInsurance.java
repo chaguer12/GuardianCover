@@ -13,8 +13,8 @@ public class HouseInsurance extends Insurance{
     private String location;
     private String security;
 
-    public HouseInsurance(double base, String attachment, double price,HouseType houseType,String location,String security){
-        super(base, attachment);
+    public HouseInsurance(double base, String attachment,User user, double price,HouseType houseType,String location,String security){
+        super(base, attachment,user);
         this.price = price;
         this.houseType = houseType;
         this.location = location;

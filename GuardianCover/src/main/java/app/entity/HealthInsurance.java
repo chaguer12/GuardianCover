@@ -2,14 +2,14 @@ package app.entity;
 
 import jakarta.persistence.Entity;
 
-@Entity(name = "houseInsurances")
+@Entity(name = "healthInsurances")
 public class HealthInsurance extends Insurance{
     private int age;
     private String healthState;
     private boolean is_premium;
 
-    public HealthInsurance(double base, String attachment,int age, String healthState,boolean is_premium){
-        super(base,attachment);
+    public HealthInsurance(double base, String attachment,User user,int age, String healthState,boolean is_premium){
+        super(base,attachment,user);
         this.age = age;
         this.healthState = healthState;
         this.is_premium = is_premium;

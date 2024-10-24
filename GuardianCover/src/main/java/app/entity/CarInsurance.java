@@ -14,8 +14,8 @@ public class CarInsurance extends Insurance{
     private String carDescription;
     private double price;
 
-    public CarInsurance(double base, String attachment, int age, CarType carType, boolean is_pro, String carDescription, double price) {
-        super(base, attachment);
+    public CarInsurance(double base, String attachment,User user, int age, CarType carType, boolean is_pro, String carDescription, double price) {
+        super(base, attachment,user);
         this.age = age;
         this.carType = carType;
         this.is_pro = is_pro;

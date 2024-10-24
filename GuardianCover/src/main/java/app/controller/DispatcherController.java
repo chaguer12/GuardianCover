@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/")
-public class TestController {
+public class DispatcherController {
 
     @GetMapping
     public ModelAndView pageLoader(){
