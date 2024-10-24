@@ -43,10 +43,15 @@
                             class="block border border-grey-light w-full p-3 rounded mb-4"
                             name="address"
                             placeholder="Address" />
+                    <input
+                            type="text"
+                            class="block border border-grey-light w-full p-3 rounded mb-4"
+                            name="tel"
+                            placeholder="Telephone" />
 
                     <button
                             type="submit"
-                            class="w-full text-center py-3 rounded bg-green text-white hover:bg-green-dark focus:outline-none my-1"
+                            class="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
                     >Create Account</button>
                 </form>
 
@@ -71,3 +76,4 @@
     </div>
 </section>
 </body>
+</html>

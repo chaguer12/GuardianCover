@@ -31,7 +31,7 @@ public class UserController {
     @PostMapping("/sign-up")
     public ModelAndView UserSignUp(@ModelAttribute User user){
         userService.save(user);
-        ModelAndView view = new ModelAndView("/view/signIn");
+        ModelAndView view = new ModelAndView("/index");
         return view;
 
     }
