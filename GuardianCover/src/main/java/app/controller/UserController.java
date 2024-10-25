@@ -1,5 +1,7 @@
 package app.controller;
 
+import app.dto.MapStructMapper;
+import app.dto.records.UserDTO;
 import app.entity.User;
 import app.service.UserServiceInterface;
 import jakarta.servlet.http.HttpServletRequest;
@@ -30,6 +32,7 @@ public class UserController {
 
     @PostMapping("/sign-up")
     public ModelAndView UserSignUp(@ModelAttribute User user){
+        UserDTO userDTO = MapStructMapper.INSTANCE.userToUserDTO(user);
         userService.save(user);
         ModelAndView view = new ModelAndView("/index");
         return view;
@@ -37,6 +40,7 @@ public class UserController {
     }
     @PostMapping("/log-in")
     public void UserLogIn(){
+
 
     }
 

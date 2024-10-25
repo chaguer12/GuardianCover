@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import java.util.List;
 import java.util.UUID;
 
-public record UserRequestDTO(
+public record UserDTO(
     @NotNull
     UUID id,
     @NotNull

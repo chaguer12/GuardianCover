@@ -2,6 +2,7 @@ package app;
 
 import app.config.AppConfig;
 import app.config.JPApersistenceConfig;
+import app.dto.records.UserDTO;
 import app.entity.User;
 import app.service.impl.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -17,8 +18,7 @@ public class Main {
 
         // Get the DataSource bean
         UserService dataSource = context.getBean(UserService.class);
-        User user = new User("hihi","jqdkhd","kqjflkjd","029384808","1224121","safi");
-        dataSource.save(user);
+
 
 
     }
