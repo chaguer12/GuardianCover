@@ -14,8 +14,7 @@ public record CarInsuranceDTO(
     @NotNull String carType,
     @NotNull boolean isPro,
     @NotNull String carDescription,
-    @NotNull
-    double price)
+    @NotNull double price)
 
 
 {

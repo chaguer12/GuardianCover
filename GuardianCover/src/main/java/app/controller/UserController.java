@@ -32,7 +32,6 @@ public class UserController {
 
     @PostMapping("/sign-up")
     public ModelAndView UserSignUp(@ModelAttribute User user){
-        UserDTO userDTO = MapStructMapper.INSTANCE.userToUserDTO(user);
         userService.save(user);
         ModelAndView view = new ModelAndView("/index");
         return view;

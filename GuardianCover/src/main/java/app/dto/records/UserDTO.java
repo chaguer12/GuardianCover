@@ -22,6 +22,6 @@ public record UserDTO(
     @NotNull
     String address,
     @NotNull
-    List<Insurance> insurances)
+    List<InsuranceDTO> insurances)
 {
 }

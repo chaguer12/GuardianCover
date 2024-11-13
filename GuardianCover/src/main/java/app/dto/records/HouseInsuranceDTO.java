@@ -10,18 +10,18 @@ public record HouseInsuranceDTO(
         double base,
         @NotNull
         String attachment,
-         @NotNull
-         boolean isAccepted,
-         @NotNull
-         UUID userId,
-         @NotNull
-         double price,
-         @NotNull
-         String houseType,
-         @NotNull
-         String location,
-         @NotNull
-         String security)
+        @NotNull
+        boolean isAccepted,
+        @NotNull
+        UUID userId,
+        @NotNull
+        double price,
+        @NotNull
+        String houseType,
+        @NotNull
+        String location,
+        @NotNull
+        String security)
 {
 }
 

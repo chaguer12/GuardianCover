@@ -1,5 +1,7 @@
 package app.service.impl;
 
+import app.dto.MapStructMapper;
+import app.dto.records.UserDTO;
 import app.entity.User;
 import app.repository.UserRepoInterface;
 import app.service.UserServiceInterface;
